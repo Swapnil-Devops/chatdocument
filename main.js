@@ -1,7 +1,7 @@
 //const axios = require('axios');
-//const fetch = require('node-fetch');
+const fetch = require('node-fetch');
 const core = require('@actions/core');
-import fetch from "node-fetch";
+// import fetch from "node-fetch";
 //const fetch = fetch(import.meta.url);
 // import * as core from "@actions/core";
 global.require = fetch; //this will make require at the global scobe and treat it like the original require
