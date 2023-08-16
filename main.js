@@ -32,11 +32,11 @@ const generate = async () => {
     const responseData = await response.json();
     if (Array.isArray(responseData.choices) && responseData.choices.length > 0) {
       const assistantReply = responseData.choices[0].message.content;
-      console.log(assistantReply);
+      console.log("Assistant:", assistantReply);
   } else {
       console.log("No valid response from the assistant.");
   }
-    // console.log('API_URL:', API_URL);
+    console.log('API_URL:', API_URL);
     const generatedResponse = responseData;
   } catch (error) {
     console.error('Error:', error);
