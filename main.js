@@ -1,5 +1,6 @@
 //const axios = require('axios');
-const fetch = require('node-fetch');
+// const fetch = require('node-fetch');
+let fetch = await import('node-fetch')
 const core = require('@actions/core');
 // import fetch from "node-fetch";
 //const fetch = fetch(import.meta.url);
