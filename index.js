@@ -16,7 +16,7 @@ const generate = async () => {
       },
       body: JSON.stringify({
         messages: [{ role: "system", content: prompt }],
-        max_tokens: 100,
+        max_tokens: 1000,
         model: "gpt-3.5-turbo"
       })
   
