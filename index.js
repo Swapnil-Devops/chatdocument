@@ -1,19 +1,11 @@
-//const axios = require('axios');
-// const fetch = require('node-fetch');
-// let fetch = await import('node-fetch')
-// const core = require('@actions/core');
 import fetch from "node-fetch";
-//const fetch = fetch(import.meta.url);
 import * as core from "@actions/core";
 global.require = fetch; //this will make require at the global scobe and treat it like the original require
 
-// const apiKey = core.getInput("openai-api-key");
 const prompt = core.getInput("prompt");
 const API_KEY = core.getInput("api_key");
 const API_URL = "https://api.openai.com/v1/chat/completions";
-// const API_KEY = "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";
 
-// const discussionBody = "\"What is Github?\""; 
 const generate = async () => {
   try {
     const response = await fetch(API_URL, {
